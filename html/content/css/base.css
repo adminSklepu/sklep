@@ -1,0 +1,129 @@
+/*** GENERAL  ***/
+html, body{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 12px;
+    font-family: Arial;
+}
+
+#containter{ 
+    width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+
+/*** LOGO  ***/
+#logo{
+    width: 980px;
+    height: 60px;
+    padding-top: 40px;
+    background-color: #48B0FF;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    border-bottom: solid 1px #000;
+}
+
+/*** MENU  ***/
+#menu{
+    color: #48B0FF;
+    width: 980px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: left;
+    border-bottom:  solid 1px #48B0FF;
+}
+
+#menu ul, #menu ul li {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+}
+
+
+
+#menu a {
+    font-size: 18px;
+    color:#48B0FF;
+    text-decoration: none;
+}
+#menu a:hover {
+
+}
+
+
+#menu_top ul li {
+    float: left;
+}
+
+
+/*** LOGIN SECTION  ***/
+#login{
+    width: 980px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+
+/*** CONTENT  ***/
+#content{
+    width: 980px;
+    padding-bottom: 20px;
+    min-height: 50px;
+    margin: 0 auto;
+}
+
+/*** FOOTER  ***/
+#footer{
+    border-top: solid 1px #000;
+    background-color: #48B0FF;
+    color: white;
+    text-align: center;
+    font-size:16px;
+    margin: 0 auto;  
+    width: 980px;
+    height: 75px;
+    padding:25px 0 0 20px;
+}
+
+
+/*** Table  ***/
+
+table{
+    border-width: 1px;
+    border-collapse: collapse;
+}
+
+table th{
+    border-width: 1px;
+    border-style:solid;
+    background-color: #48B0FF;
+    padding: 5px;
+    color: white;
+    border-color: black;
+    font-weight: bold;
+}
+
+table td{
+    border-width: 1px;
+    border-style:solid;
+    background-color: #fff;
+    padding: 5px;
+    color: black;
+}
+
+/*** a ***/
+a{
+    text-decoration: none;
+    color: #48B0FF;
+}
+
