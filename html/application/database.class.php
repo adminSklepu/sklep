@@ -133,6 +133,45 @@ Class Database {
         }
         return $roles;
     }
+    
+       //DODANIE KATEGORII
+    public static function addKategoria($kategoria) {
+        $stmt = self::$db->prepare("INSERT INTO kategoria(nazwa) "
+                . "VALUES(:nazwa)");
+        $stmt->execute(array(':nazwa' => $kategoria->getNazwa()));
+        $affected_rows = $stmt->rowCount();
+        if ($affected_rows == 1) {
+            return TRUE;
+        }
+        return FALSE;
+    }
+    //POBRANIE LISTY KATEGORII
+    public static function getKategoriaList() {
+        $stmt = self::$db->query('SELECT * FROM kategoria');
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    //USUNIECIE KATEGORII
+    public static function deleteKategoria($kategoria) {
+        $stmt = self::$db->prepare('DELETE FROM kategoria WHERE id_kategorii=?');
+        $stmt->execute(array($kategoria->getIdKategorii()));
+        $affected_rows = $stmt->rowCount();
+        if ($affected_rows == 1) {
+            return TRUE;
+        }
+        return FALSE;
+    }
+    //EDYCJA KATEGORII
+    public static function updateKategoria($kategoria) {
+        $stmt = self::$db->prepare('UPDATE kategoria set nazwa=? WHERE id_kategorii=?');
+        $stmt->execute(array($kategoria->getNazwa(), $kategoria->getIdKategorii()));
+        $affected_rows = $stmt->rowCount();
+        if ($affected_rows == 1) {
+            return TRUE;
+        }
+        return FALSE;
+    }
+
+    
 
 }
 
